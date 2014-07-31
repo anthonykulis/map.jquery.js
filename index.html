@@ -1,0 +1,85 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="roll-over-map">
+		<div class="map-wrapper">
+			<article class="map"></article>
+			<article class="location">
+				<div class="a loc"></div>
+				<div class="b loc"></div>
+			</article>
+		</div>
+	</section>
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="map.jquery.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('.roll-over-map').rolloverMap({
+			rollovers: [{
+				x: 56,
+				y: 52,
+				$ref: $('.a')
+			},{
+				x: 63,
+				y: 70,
+				$ref: $('.b')
+			},{
+				x: 82,
+				y: 71,
+				$ref: $('.a')
+			},{
+				x: 91,
+				y: 91,
+				$ref: $('.b')
+			},{
+				x: 83,
+				y: 82,
+				$ref: $('.a'),
+				primary: true
+			},{
+				x: 77,
+				y: 97,
+				$ref: $('.a')
+			},{
+				x: 92,
+				y: 70,
+				$ref: $('.b')
+			},{
+				x: 92,
+				y: 56,
+				$ref: $('.a')
+			},{
+				x: 237,
+				y: 51,
+				$ref: $('.b')
+			},{
+				x: 280,
+				y: 74,
+				$ref: $('.a')
+			},{
+				x: 292,
+				y: 216,
+				$ref: $('.b')
+			},{
+				x: 390,
+				y: 117,
+				$ref: $('.a')
+			},{
+				x: 492,
+				y: 212,
+				$ref: $('.b')
+			}],
+
+			$map: $('.map'),
+			map_url: 'Locations_map_graphic.gif',
+			$loc: $('.location'),
+			keep_active: true
+		})
+	});
+	</script>
+</body>
+</html>
